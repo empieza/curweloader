@@ -1,0 +1,6 @@
+{
+    "scripts": [
+        { "name": "Test", "file": "test.lua" },
+        { "name": "Example", "file": "example.lua" }
+    ]
+}
