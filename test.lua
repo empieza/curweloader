@@ -31,14 +31,13 @@ local test = {}; do
     end
 
     client.set_event_callback("paint", on_paint)
-    client.color_log(144, 238, 144, "[curwe test] ", 255, 255, 255, "script started")
+    client.color_log(144, 238, 144, "[curwe test] \0")
+    client.color_log(255, 255, 255, "script started")
 
     function test.unload()
         client.unset_event_callback("paint", on_paint)
-        ui.set_visible(refs.label, false)
-        ui.set_visible(refs.enable, false)
-        ui.set_visible(refs.color, false)
-        client.color_log(255, 180, 100, "[curwe test] ", 255, 255, 255, "script stopped")
+        client.color_log(255, 180, 100, "[curwe test] \0")
+        client.color_log(255, 255, 255, "script stopped")
     end
 end
 
